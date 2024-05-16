@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,12 +12,20 @@
     <artifactId>dricats-services-auditing</artifactId>
     <packaging>pom</packaging>
 
-    <name>DRICaTS :: Services :: Auditing</name>
-    <description>The Audit (Event) Management Service</description>
+    <name>DRICaTS :: Services :: Audit</name>
+    <description>The Auditing Capture, Distribution and Monitoring Framework</description>
 
     <modules>
-	<module>common</module>
-	<module>client</module>
-        <module>server</module>
+        <module>agent</module>
+        <module>common</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>2.0.SP1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
