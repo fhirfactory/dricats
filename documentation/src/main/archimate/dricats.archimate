@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="DRICaTS" id="id-3a0d42a0354244df9476bda3cd62ebf4" version="5.0.0">
+  <folder name="Strategy" id="id-94dcf0027a624e0da342790e5c3f01b2" type="strategy"/>
+  <folder name="Business" id="id-a2be74c085ef42f59339e87d123c2728" type="business"/>
+  <folder name="Application" id="id-7f687084d2a143d2965dfe1ad9dc639d" type="application">
+    <element xsi:type="archimate:ApplicationComponent" name="DRICaTS" id="id-0c3b33a2a3504bea996490940c9f3404"/>
+  </folder>
+  <folder name="Technology &amp; Physical" id="id-787f8ea00fa04fb0a7c238e4cc9d7ee7" type="technology"/>
+  <folder name="Motivation" id="id-2f405253cc9c490c9be6fa4a67d6ff7b" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="id-70b639c100b24371a9b3f95a42009654" type="implementation_migration"/>
+  <folder name="Other" id="id-e9394d98b86842f3be1a9c3814b58b2b" type="other"/>
+  <folder name="Relations" id="id-a72051130277456b815006b1f3a7d557" type="relations"/>
+  <folder name="Views" id="id-f9698cea7db1449db7adcad1d7d9ba68" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="id-5c823015ca434c68ac11a7ffc00991c4" viewpoint="application_structure">
+      <child xsi:type="archimate:DiagramObject" id="id-e437341f11af458ba579d148b98408fb" archimateElement="id-0c3b33a2a3504bea996490940c9f3404">
+        <bounds x="383" y="178" width="120" height="55"/>
+      </child>
+    </element>
+  </folder>
+  <purpose>Distributed, Resilient, Integration, Collaboration and Tasking Service</purpose>
+</archimate:model>
