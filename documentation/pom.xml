@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>net.fhirfactory.dricats</groupId>
+        <artifactId>dricats</artifactId>
+        <version>0.5.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>dricats-documentation</artifactId>
+    <packaging>jar</packaging>
+
+    <name>DRICaTS :: Documentation</name>
+    <description>The Distributed, Resilient, Integration, Collaboration and Tasking System (DRICaTS)  Documentation</description>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <prerequisites>
+        <maven>3.5.0</maven>
+    </prerequisites>
+
+    <developers>
+        <developer>
+            <id>mahunter</id>
+        </developer>
+        <developer>
+            <id>jrschremmer</id>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
