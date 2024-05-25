@@ -1,0 +1,104 @@
+\documentclass[a4paper,10pt, openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2cm]{geometry}
+\usepackage{makeidx}
+\makeindex
+\usepackage[dvipsnames]{xcolor}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\graphicspath{{/home/mhunter/Documents/Work/DAFF/STEPS/STEPS-Archimate-Model/Diagrams/}}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{parskip}
+\usepackage{pgf,tikz}
+\usetikzlibrary{shapes, positioning, calc, arrows, fit, backgrounds,automata}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subscript}
+\usepackage{tikzpeople}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{prettyref}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+\usetikzlibrary{arrows}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage{latexsym}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subscript}
+\usepackage{tikzpeople}
+\usepackage{longtable}
+\usepackage{multirow}
+
+\newcommand{\documentedition}{0.01}
+
+\setlength{\headheight}{40pt}
+\setlength{\parindent}{0cm}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{4}
+\fancyhf{}
+\setlength{\headsep}{2pt}
+\fancypagestyle{plain}{% % <-- this is new
+  \fancyhf{}
+  \rhead{DRICaTS: Solution Architecture Document}
+  \lhead{FHIRFactory}
+  \rfoot{\textcolor{Blue}{Page \thepage \hspace{1pt} of \pageref{LastPage}}}
+  \lfoot{Version 0.1-SNAPSHOT}
+  \renewcommand{\headrulewidth}{1pt}}
+\renewcommand{\footrulewidth}{2pt}
+\definecolor{dark-red}{rgb}{0.4,0.15,0.15}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{medium-blue}{rgb}{0,0,0.5}
+\hypersetup{
+    colorlinks, linkcolor={dark-red},
+    citecolor={dark-blue}, urlcolor={medium-blue}
+}
+
+\author{Mark Hunter}
+
+\begin{document}
+
+\title{DRICaTS-Solution-Architecture}
+\subtitle{A Non-Exhaustive, Incomplete Archimate Based Solution Architecture}
+\date{\today}
+\maketitle
+\tableofcontents
+
+\part{DRICaTS Overview}
+
+\chapter{Drivers}
+
+The STEPS program of work may be summarised as having a single core driver:
+
+\begin{quote}
+ \bf{An Integrated Cargo Clearance System that is Faster, Simpler and Supports Effective Biosecurity Risk Management}
+\end{quote}
+
+Of course, such a ``driver'' is, by definition, multifaceted and requires analysis within the scope of the associated Goals, Benefits and Outcomes.
+
+\chapter{Goals}
+
+The following diagram introduces the core \em{Goals} of the STEPS Program.
+
+
+\end{document}
+\end{document}
