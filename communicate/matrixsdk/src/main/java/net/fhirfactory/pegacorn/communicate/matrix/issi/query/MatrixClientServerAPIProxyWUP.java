@@ -33,7 +33,7 @@ import net.fhirfactory.dricats.core.model.topology.endpoints.http.HTTPClientTopo
 import net.fhirfactory.dricats.core.model.topology.nodes.external.ConnectedExternalSystemTopologyNode;
 import net.fhirfactory.dricats.util.PegacornEnvironmentProperties;
 import net.fhirfactory.dricats.workshops.InterSubSystemIntegrationWorkshop;
-import net.fhirfactory.dricats.wups.archetypes.petasosenabled.messageprocessingbased.InteractEgressAPIClientGatewayWUP;
+import net.fhirfactory.dricats.wups.archetypes.managed.messageprocessingbased.InteractEgressAPIClientGatewayWUP;
 import net.fhirfactory.pegacorn.communicate.matrix.credentials.MatrixAccessToken;
 import net.fhirfactory.pegacorn.communicate.matrix.issi.query.beans.MatrixApplicationServicesQueryProcessingBean;
 import net.fhirfactory.pegacorn.communicate.matrix.issi.query.beans.MatrixQueryProcessingBean;

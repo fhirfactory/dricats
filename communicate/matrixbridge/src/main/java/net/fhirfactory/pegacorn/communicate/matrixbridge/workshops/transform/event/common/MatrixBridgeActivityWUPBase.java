@@ -24,7 +24,7 @@ package net.fhirfactory.pegacorn.communicate.matrixbridge.workshops.transform.ev
 
 import net.fhirfactory.dricats.core.interfaces.topology.WorkshopInterface;
 import net.fhirfactory.dricats.workshops.TransformWorkshop;
-import net.fhirfactory.dricats.wups.archetypes.petasosenabled.messageprocessingbased.MOAStandardWUP;
+import net.fhirfactory.dricats.wups.archetypes.managed.messageprocessingbased.MOAStandardWUP;
 
 import javax.inject.Inject;
 

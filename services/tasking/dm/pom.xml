@@ -244,7 +244,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-workunit-audit</artifactId>
+            <artifactId>dricats-components-workunit-audit</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -256,7 +256,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-workunit-core</artifactId>
+            <artifactId>dricats-components-workunit-core</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -300,7 +300,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-edge-restful</artifactId>
+            <artifactId>dricats-components-connectors-internal-restful</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -308,7 +308,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-edge-model</artifactId>
+            <artifactId>dricats-components-connectors-internal-model</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -320,7 +320,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-endpoints</artifactId>
+            <artifactId>dricats-components-connectors-external</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -332,21 +332,21 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-processingplant</artifactId>
+            <artifactId>dricats-components-modules</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-workshop</artifactId>
+            <artifactId>dricats-components-submodules</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-workunitprocessors</artifactId>
+            <artifactId>dricats-components-workunitprocessors</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
@@ -357,14 +357,14 @@
 
         <!--dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-interception-common</artifactId>
+            <artifactId>dricats-components-interception-common</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-interception-agent</artifactId>
+            <artifactId>dricats-components-interception-agent</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency-->

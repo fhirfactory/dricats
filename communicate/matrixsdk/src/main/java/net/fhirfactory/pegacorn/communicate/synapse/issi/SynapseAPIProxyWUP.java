@@ -32,7 +32,7 @@ import net.fhirfactory.dricats.core.model.topology.endpoints.adapters.HTTPClient
 import net.fhirfactory.dricats.core.model.topology.endpoints.http.HTTPClientTopologyEndpoint;
 import net.fhirfactory.dricats.core.model.topology.nodes.external.ConnectedExternalSystemTopologyNode;
 import net.fhirfactory.dricats.workshops.InterSubSystemIntegrationWorkshop;
-import net.fhirfactory.dricats.wups.archetypes.petasosenabled.messageprocessingbased.InteractEgressAPIClientGatewayWUP;
+import net.fhirfactory.dricats.wups.archetypes.managed.messageprocessingbased.InteractEgressAPIClientGatewayWUP;
 import net.fhirfactory.pegacorn.communicate.synapse.credentials.SynapseAdminAccessToken;
 import net.fhirfactory.pegacorn.communicate.synapse.issi.beans.SynapseAccessTokenExtractorBean;
 import net.fhirfactory.pegacorn.communicate.synapse.issi.beans.SynapseLoginMethodCreatorBean;

@@ -30,7 +30,7 @@ import net.fhirfactory.dricats.core.model.dataparcel.valuesets.DataParcelValidat
 import net.fhirfactory.dricats.core.model.dataparcel.valuesets.PolicyEnforcementPointApprovalStatusEnum;
 import net.fhirfactory.dricats.itops.im.workshops.transform.beans.WrapMetricsContent;
 import net.fhirfactory.dricats.workshops.TransformWorkshop;
-import net.fhirfactory.dricats.wups.archetypes.petasosenabled.messageprocessingbased.MOAStandardWUP;
+import net.fhirfactory.dricats.wups.archetypes.managed.messageprocessingbased.MOAStandardWUP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

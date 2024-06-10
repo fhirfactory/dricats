@@ -29,7 +29,7 @@ import net.fhirfactory.dricats.core.model.topology.endpoints.http.HTTPServerTopo
 import net.fhirfactory.dricats.core.participants.wup.helper.IngresActivityBeginRegistration;
 import net.fhirfactory.dricats.util.PegacornProperties;
 import net.fhirfactory.dricats.workshops.InteractWorkshop;
-import net.fhirfactory.dricats.wups.archetypes.petasosenabled.messageprocessingbased.InteractIngresMessagingGatewayWUP;
+import net.fhirfactory.dricats.wups.archetypes.managed.messageprocessingbased.InteractIngresMessagingGatewayWUP;
 import net.fhirfactory.pegacorn.communicate.matrix.issi.receiver.beans.IncomingMatrixEventSet2UoW;
 import net.fhirfactory.pegacorn.communicate.matrix.issi.receiver.beans.IncomingMatrixEventSetValidator;
 import net.fhirfactory.pegacorn.communicate.matrix.issi.receiver.beans.IncomingMatrixMessageSplitter;

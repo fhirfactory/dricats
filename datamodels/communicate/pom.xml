@@ -248,7 +248,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-platform-workunit-audit</artifactId>
+            <artifactId>dricats-components-workunit-audit</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
             <type>jar</type>

@@ -42,8 +42,9 @@
         <module>datamodels</module>
         <module>deployment</module>
         <module>commoncode</module>
-        <module>platform</module>
+        <module>components</module>
         <module>communicate</module>
+        <module>documentation</module>
     </modules>
 
     <scm>

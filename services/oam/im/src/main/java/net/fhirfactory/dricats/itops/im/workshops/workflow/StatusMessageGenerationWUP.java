@@ -29,7 +29,7 @@ import net.fhirfactory.dricats.itops.im.workshops.workflow.beans.ITOpsNotificati
 import net.fhirfactory.dricats.itops.im.workshops.workflow.beans.ITOpsNotificationToCommunicateEmailMessage;
 import net.fhirfactory.dricats.itops.im.workshops.workflow.beans.ITOpsNotificationToCommunicateSMSMessage;
 import net.fhirfactory.dricats.workshops.WorkflowWorkshop;
-import net.fhirfactory.dricats.wups.archetypes.petasosenabled.messageprocessingbased.StimuliTriggeredWorkflowWUP;
+import net.fhirfactory.dricats.wups.archetypes.managed.messageprocessingbased.StimuliTriggeredWorkflowWUP;
 import org.apache.camel.model.RouteDefinition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

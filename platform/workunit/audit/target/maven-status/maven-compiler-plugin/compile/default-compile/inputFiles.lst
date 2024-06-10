@@ -1,7 +1,0 @@
-/home/mhunter/Development/Code/Projects/dricats/platform/workunit/audit/src/main/java/net/fhirfactory/dricats/petasos/audit/brokers/InteractIngresAuditServicesBroker.java
-/home/mhunter/Development/Code/Projects/dricats/platform/workunit/audit/src/main/java/net/fhirfactory/dricats/petasos/audit/brokers/STAServicesAuditBroker.java
-/home/mhunter/Development/Code/Projects/dricats/platform/workunit/audit/src/main/java/net/fhirfactory/dricats/petasos/audit/transformers/Exception2FHIRAuditEvent.java
-/home/mhunter/Development/Code/Projects/dricats/platform/workunit/audit/src/main/java/net/fhirfactory/dricats/petasos/audit/transformers/PetasosFulfillmentTask2FHIRAuditEvent.java
-/home/mhunter/Development/Code/Projects/dricats/platform/workunit/audit/src/main/java/net/fhirfactory/dricats/petasos/audit/transformers/UoWPayload2FHIRAuditEvent.java
-/home/mhunter/Development/Code/Projects/dricats/platform/workunit/audit/src/main/java/net/fhirfactory/dricats/petasos/audit/brokers/PetasosFulfillmentTaskAuditServicesBroker.java
-/home/mhunter/Development/Code/Projects/dricats/platform/workunit/audit/src/main/java/net/fhirfactory/dricats/petasos/audit/transformers/common/Pegacorn2FHIRAuditEventBase.java

@@ -32,7 +32,7 @@ import net.fhirfactory.dricats.internals.fhir.r4.internal.topics.FHIRElementTopi
 import net.fhirfactory.dricats.services.audit.forwarder.beans.AuditEventExtractor;
 import net.fhirfactory.dricats.services.audit.forwarder.beans.AuditEventPersistenceAccessor;
 import net.fhirfactory.dricats.workshops.AuditWorkshop;
-import net.fhirfactory.dricats.wups.archetypes.petasosenabled.messageprocessingbased.MOAStandardWUP;
+import net.fhirfactory.dricats.wups.archetypes.managed.messageprocessingbased.MOAStandardWUP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

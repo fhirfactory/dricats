@@ -1,0 +1,4 @@
+net/fhirfactory/dricats/platform/edge/itops/configuration/JGroupsGossipRouterNode.class
+net/fhirfactory/dricats/platform/edge/messaging/InterZoneRepeater.class
+net/fhirfactory/dricats/platform/edge/itops/configuration/JGroupsGossipRouterNodeConfig.class
+net/fhirfactory/dricats/platform/edge/InterzoneRepeaterService.class
