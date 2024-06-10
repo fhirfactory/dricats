@@ -7,7 +7,7 @@
     <parent>
         <groupId>net.fhirfactory.dricats</groupId>
         <artifactId>dricats-communicate-iris</artifactId>
-        <version>0.5.0-SNAPSHOT</version>
+        <version>0.1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>dricats-communicate-iris-subsystem</artifactId>
@@ -133,7 +133,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-petasos-audit</artifactId>
+            <artifactId>dricats-platform-workunit-audit</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -141,28 +141,28 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-petasos-core</artifactId>
+            <artifactId>dricats-platform-workunit-core</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-edge-model</artifactId>
+            <artifactId>dricats-platform-edge-model</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-processingplant</artifactId>
+            <artifactId>dricats-platform-processingplant</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-workunitprocessors</artifactId>
+            <artifactId>dricats-platform-workunitprocessors</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>

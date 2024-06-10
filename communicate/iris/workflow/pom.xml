@@ -7,7 +7,7 @@
     <parent>
         <groupId>net.fhirfactory.dricats</groupId>
         <artifactId>dricats-communicate-iris</artifactId>
-        <version>0.5.0-SNAPSHOT</version>
+        <version>0.1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>dricats-communicate-iris-workflow</artifactId>
@@ -145,7 +145,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-petasos-core</artifactId>
+            <artifactId>dricats-platform-workunit-core</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -153,14 +153,14 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-edge-model</artifactId>
+            <artifactId>dricats-platform-edge-model</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-processingplant</artifactId>
+            <artifactId>dricats-platform-processingplant</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -184,7 +184,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-workshop</artifactId>
+            <artifactId>dricats-platform-workshop</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>

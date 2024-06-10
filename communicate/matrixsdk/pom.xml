@@ -14,7 +14,7 @@
     <parent>
         <groupId>net.fhirfactory.dricats</groupId>
         <artifactId>dricats-communicate</artifactId>
-        <version>0.5.0-SNAPSHOT</version>
+        <version>0.1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>dricats-communicate-matrixsdk</artifactId>
@@ -246,7 +246,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-petasos-core</artifactId>
+            <artifactId>dricats-platform-workunit-core</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -254,7 +254,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-petasos-audit</artifactId>
+            <artifactId>dricats-platform-workunit-audit</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -273,7 +273,7 @@
         </dependency>
 
         <!--*******************************************************************************-->
-        <!-- DRICaTS (BuildingBlocks) Libraries                                           -->
+        <!-- DRICaTS (platform) Libraries                                           -->
         <!--*******************************************************************************-->
 
         <dependency>
@@ -290,7 +290,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-edge-restful</artifactId>
+            <artifactId>dricats-platform-edge-restful</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -298,7 +298,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-edge-messaging</artifactId>
+            <artifactId>dricats-platform-edge-messaging</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -306,7 +306,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-edge-model</artifactId>
+            <artifactId>dricats-platform-edge-model</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -318,7 +318,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-endpoints</artifactId>
+            <artifactId>dricats-platform-endpoints</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -330,21 +330,21 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-processingplant</artifactId>
+            <artifactId>dricats-platform-processingplant</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-workshop</artifactId>
+            <artifactId>dricats-platform-workshop</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-workunitprocessors</artifactId>
+            <artifactId>dricats-platform-workunitprocessors</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
@@ -355,7 +355,7 @@
         <!--
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-datamodels-synapse</artifactId>
+            <artifactId>dricats-platform-datamodels-synapse</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -363,7 +363,7 @@
 
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-datamodels-esr</artifactId>
+            <artifactId>dricats-platform-datamodels-esr</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
@@ -375,7 +375,7 @@
         <!--
         <dependency>
             <groupId>net.fhirfactory.dricats</groupId>
-            <artifactId>dricats-buildingblocks-directoryservices</artifactId>
+            <artifactId>dricats-platform-directoryservices</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
             <scope>compile</scope>
