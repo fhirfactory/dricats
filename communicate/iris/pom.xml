@@ -6,7 +6,7 @@
     <parent>
         <groupId>net.fhirfactory.dricats</groupId>
         <artifactId>dricats-communicate</artifactId>
-        <version>0.5.0-SNAPSHOT</version>
+        <version>0.1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>dricats-communicate-iris</artifactId>

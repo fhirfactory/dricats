@@ -1,0 +1,10 @@
+net/fhirfactory/dricats/petasos/audit/transformers/common/Pegacorn2FHIRAuditEventBase.class
+net/fhirfactory/dricats/petasos/audit/brokers/PetasosFulfillmentTaskAuditServicesBroker.class
+net/fhirfactory/dricats/petasos/audit/brokers/InteractIngresAuditServicesBroker.class
+net/fhirfactory/dricats/petasos/audit/transformers/PetasosFulfillmentTask2FHIRAuditEvent.class
+net/fhirfactory/dricats/petasos/audit/transformers/Exception2FHIRAuditEvent.class
+net/fhirfactory/dricats/petasos/audit/brokers/STAServicesAuditBroker.class
+net/fhirfactory/dricats/petasos/audit/transformers/common/Pegacorn2FHIRAuditEventBase$1.class
+net/fhirfactory/dricats/petasos/audit/transformers/UoWPayload2FHIRAuditEvent.class
+net/fhirfactory/dricats/petasos/audit/brokers/PetasosFulfillmentTaskAuditServicesBroker$1.class
+net/fhirfactory/dricats/petasos/audit/transformers/UoWPayload2FHIRAuditEvent$1.class
