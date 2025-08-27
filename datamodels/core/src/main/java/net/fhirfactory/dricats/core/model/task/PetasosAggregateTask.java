@@ -21,26 +21,28 @@
  */
 package net.fhirfactory.dricats.core.model.task;
 
-import lombok.*;
-import lombok.extern.jackson.Jacksonized;
-import lombok.extern.slf4j.Slf4j;
 import net.fhirfactory.dricats.core.model.task.datatypes.identity.datatypes.TaskIdType;
 import net.fhirfactory.dricats.core.model.task.datatypes.reporting.datatypes.TaskReportingType;
 import net.fhirfactory.dricats.core.model.task.datatypes.status.datatypes.AggregateTaskStatusType;
 import net.fhirfactory.dricats.core.model.task.datatypes.tasktype.TaskTypeType;
 import net.fhirfactory.dricats.core.model.task.datatypes.tasktype.valuesets.TaskTypeTypeEnum;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.io.Serial;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode
-@Slf4j
-@Jacksonized
 public class PetasosAggregateTask extends PetasosTask {
-
+    //
+    // Housekeeping
+    //
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private static final Logger LOG = LoggerFactory.getLogger(PetasosAggregateTask.class);
+    //
+    // Member Variables
+    //
     private TaskReportingType taskReporting;
 
     private AggregateTaskStatusType aggregateTaskStatus;
@@ -86,5 +88,74 @@ public class PetasosAggregateTask extends PetasosTask {
             }
         }
         return(hasValue);
+    }
+
+    //
+    // Getters and Setters
+    //
+
+    protected Logger getLogger(){
+        return(LOG);
+    }
+
+    public TaskReportingType getTaskReporting() {
+        return taskReporting;
+    }
+
+    public void setTaskReporting(TaskReportingType taskReporting) {
+        this.taskReporting = taskReporting;
+    }
+
+    public AggregateTaskStatusType getAggregateTaskStatus() {
+        return aggregateTaskStatus;
+    }
+
+    public void setAggregateTaskStatus(AggregateTaskStatusType aggregateTaskStatus) {
+        this.aggregateTaskStatus = aggregateTaskStatus;
+    }
+
+    public TaskIdType getActionableTaskId() {
+        return actionableTaskId;
+    }
+
+    public void setActionableTaskId(TaskIdType actionableTaskId) {
+        this.actionableTaskId = actionableTaskId;
+    }
+
+    public Set<TaskIdType> getSubTasks() {
+        return subTasks;
+    }
+
+    public void setSubTasks(Set<TaskIdType> subTasks) {
+        this.subTasks = subTasks;
+    }
+
+    //
+    // Utility Methods
+    //
+
+    @Override
+    public String toString() {
+        return "PetasosAggregateTask{" +
+                "taskReporting=" + getTaskReporting() +
+                ", aggregateTaskStatus=" + getAggregateTaskStatus() +
+                ", actionableTaskId=" + getActionableTaskId() +
+                ", subTasks=" + getSubTasks() +
+                ", creationInstant=" + getCreationInstant() +
+                ", updateInstant=" + getUpdateInstant() +
+                ", sourceResourceId=" + getSourceResourceId() +
+                ", taskContext=" + getTaskContext() +
+                ", taskId=" + getTaskId() +
+                ", taskType=" + getTaskType() +
+                ", taskWorkItem=" + getTaskWorkItem() +
+                ", taskTraceability=" + getTaskTraceability() +
+                ", taskOutcomeStatus=" + getTaskOutcomeStatus() +
+                ", taskPerformerTypes=" + getTaskPerformerTypes() +
+                ", taskReason=" + getTaskReason() +
+                ", taskNodeAffinity=" + getTaskNodeAffinity() +
+                ", aggregateTaskMembership=" + getAggregateTaskMembership() +
+                ", taskExecutionDetail=" + getTaskExecutionDetail() +
+                ", registered=" + isRegistered() +
+                '}';
     }
 }

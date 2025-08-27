@@ -32,15 +32,22 @@ import net.fhirfactory.dricats.core.model.task.datatypes.completion.datatypes.Ta
 import net.fhirfactory.dricats.core.model.task.datatypes.fulfillment.datatypes.TaskFulfillmentType;
 import net.fhirfactory.dricats.core.model.task.datatypes.tasktype.TaskTypeType;
 import net.fhirfactory.dricats.core.model.task.datatypes.tasktype.valuesets.TaskTypeTypeEnum;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Data
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode
-@Slf4j
-@Jacksonized
+import java.io.Serial;
+
 public class PetasosActionableTask extends PetasosTask {
+    //
+    // Housekeeping
+    //
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private static final Logger LOG = LoggerFactory.getLogger(PetasosActionableTask.class);
 
+    //
+    // Member Variables
+    //
     private TaskFulfillmentType taskFulfillment;
     private TaskCompletionSummaryType taskCompletionSummary;
 
@@ -70,21 +77,46 @@ public class PetasosActionableTask extends PetasosTask {
     }
 
     //
+    // Getters and Setters
+    //
+
+    @Override
+    protected Logger getLogger() {
+        return(LOG);
+    }
+
+    public TaskFulfillmentType getTaskFulfillment() {
+        return taskFulfillment;
+    }
+
+    public void setTaskFulfillment(TaskFulfillmentType taskFulfillment) {
+        this.taskFulfillment = taskFulfillment;
+    }
+
+    public TaskCompletionSummaryType getTaskCompletionSummary() {
+        return taskCompletionSummary;
+    }
+
+    public void setTaskCompletionSummary(TaskCompletionSummaryType taskCompletionSummary) {
+        this.taskCompletionSummary = taskCompletionSummary;
+    }
+
+    //
     // Update ActionableTask
     //
 
     @JsonIgnore
     public PetasosTask update(PetasosActionableTask update) {
-        log.debug(".update(): Entry, update->{}", update);
+        getLogger().debug(".update(): Entry, update->{}", update);
         //
         // 1st, update the super-class attributes
         PetasosActionableTask updatedPetasosTask = (PetasosActionableTask) updatePetasosTask(update);
-        log.trace(".update(): After PetasosTask update, updatedPetasosTask->{}", updatedPetasosTask);
-        log.trace(".update(): After PetasosTask update, this->{}", this);
+        getLogger().trace(".update(): After PetasosTask update, updatedPetasosTask->{}", updatedPetasosTask);
+        getLogger().trace(".update(): After PetasosTask update, this->{}", this);
         //
         // 2nd, update the PetasosActionableTask specific attributes
         PetasosActionableTask updatedTask = updatePetasosActionableTask(update);
-        log.debug(".update(): Exit, updatedTask->{}", updatedTask);
+        getLogger().debug(".update(): Exit, updatedTask->{}", updatedTask);
         return (updatedTask);
     }
 
@@ -102,8 +134,8 @@ public class PetasosActionableTask extends PetasosTask {
                 this.getTaskCompletionSummary().setDownstreamTaskMap(update.getTaskCompletionSummary().getDownstreamTaskMap());
             }
         }
-        log.trace(".updatePetasosActionableTask(): About to Update: update->getTaskFulfillment()->{}", update.getTaskFulfillment());
-        log.trace(".updatePetasosActionableTask(): About to Update: this->getTaskFulfillment()->{}", this.getTaskFulfillment());
+        getLogger().trace(".updatePetasosActionableTask(): About to Update: update->getTaskFulfillment()->{}", update.getTaskFulfillment());
+        getLogger().trace(".updatePetasosActionableTask(): About to Update: this->getTaskFulfillment()->{}", this.getTaskFulfillment());
         if (update.getTaskFulfillment() != null) {
             if (!(this.getTaskFulfillment() != null)) {
                 this.setTaskFulfillment(update.getTaskFulfillment());
@@ -137,7 +169,34 @@ public class PetasosActionableTask extends PetasosTask {
                 }
             }
         }
-        log.debug(".updatePetasosActionableTask(): After Update: this->getTaskFulfillment()->{}", this.getTaskFulfillment());
+        getLogger().debug(".updatePetasosActionableTask(): After Update: this->getTaskFulfillment()->{}", this.getTaskFulfillment());
         return (this);
+    }
+
+    //
+    // Utility Methods
+    //
+
+    @Override
+    public String toString() {
+        return "PetasosActionableTask{" +
+                "taskFulfillment=" + getTaskFulfillment() +
+                ", taskCompletionSummary=" + getTaskCompletionSummary() +
+                ", creationInstant=" + getCreationInstant() +
+                ", updateInstant=" + getUpdateInstant() +
+                ", sourceResourceId=" + getSourceResourceId() +
+                ", taskContext=" + getTaskContext() +
+                ", taskId=" + getTaskId() +
+                ", taskType=" + getTaskType() +
+                ", taskWorkItem=" + getTaskWorkItem() +
+                ", taskTraceability=" + getTaskTraceability() +
+                ", taskOutcomeStatus=" + getTaskOutcomeStatus() +
+                ", taskPerformerTypes=" + getTaskPerformerTypes() +
+                ", taskReason=" + getTaskReason() +
+                ", taskNodeAffinity=" + getTaskNodeAffinity() +
+                ", aggregateTaskMembership=" + getAggregateTaskMembership() +
+                ", taskExecutionDetail=" + getTaskExecutionDetail() +
+                ", registered=" + isRegistered() +
+                '}';
     }
 }

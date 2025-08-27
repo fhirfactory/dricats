@@ -21,23 +21,27 @@
  */
 package net.fhirfactory.dricats.core.model.task;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
-import lombok.extern.jackson.Jacksonized;
-import lombok.extern.slf4j.Slf4j;
 import net.fhirfactory.dricats.core.model.task.datatypes.fulfillment.datatypes.TaskFulfillmentType;
 import net.fhirfactory.dricats.core.model.task.datatypes.identity.datatypes.TaskIdType;
 import net.fhirfactory.dricats.core.model.task.datatypes.tasktype.TaskTypeType;
 import net.fhirfactory.dricats.core.model.task.datatypes.tasktype.valuesets.TaskTypeTypeEnum;
 import net.fhirfactory.dricats.core.model.wup.PetasosTaskJobCard;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Data
-@ToString(includeFieldNames=true)
-@EqualsAndHashCode
-@Slf4j
-@Jacksonized
+import java.io.Serial;
+
 public class PetasosFulfillmentTask extends PetasosTask {
+    //
+    // Housekeeping
+    //
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private static final Logger LOG = LoggerFactory.getLogger(PetasosFulfillmentTask.class);
+
+    //
+    // Member Variables
+    //
 
     private TaskFulfillmentType taskFulfillment;
 
@@ -74,5 +78,75 @@ public class PetasosFulfillmentTask extends PetasosTask {
 
     public boolean hasActionableTaskId() {
         return actionableTaskId != null;
+    }
+
+    //
+    // Getters and Setters
+    //
+
+    protected Logger getLogger(){
+        return(LOG);
+    }
+
+    public TaskFulfillmentType getTaskFulfillment() {
+        return taskFulfillment;
+    }
+
+    public void setTaskFulfillment(TaskFulfillmentType taskFulfillment) {
+        this.taskFulfillment = taskFulfillment;
+    }
+
+    public PetasosTaskJobCard getTaskJobCard() {
+        return taskJobCard;
+    }
+
+    public void setTaskJobCard(PetasosTaskJobCard taskJobCard) {
+        this.taskJobCard = taskJobCard;
+    }
+
+    public TaskIdType getActionableTaskId() {
+        return actionableTaskId;
+    }
+
+    public void setActionableTaskId(TaskIdType actionableTaskId) {
+        this.actionableTaskId = actionableTaskId;
+    }
+
+    public boolean isaRetry() {
+        return aRetry;
+    }
+
+    public void setaRetry(boolean aRetry) {
+        this.aRetry = aRetry;
+    }
+
+    //
+    // Utility Methods
+    //
+
+
+    @Override
+    public String toString() {
+        return "PetasosFulfillmentTask{" +
+                "taskFulfillment=" + getTaskFulfillment() +
+                ", taskJobCard=" + getTaskJobCard() +
+                ", actionableTaskId=" + getActionableTaskId() +
+                ", aRetry=" + isaRetry() +
+                ", creationInstant=" + getCreationInstant() +
+                ", updateInstant=" + getUpdateInstant() +
+                ", sourceResourceId=" + getSourceResourceId() +
+                ", taskContext=" + getTaskContext() +
+                ", taskId=" + getTaskId() +
+                ", taskType=" + getTaskType() +
+                ", taskWorkItem=" + getTaskWorkItem() +
+                ", taskTraceability=" + getTaskTraceability() +
+                ", taskOutcomeStatus=" + getTaskOutcomeStatus() +
+                ", taskPerformerTypes=" + getTaskPerformerTypes() +
+                ", taskReason=" + getTaskReason() +
+                ", taskNodeAffinity=" + getTaskNodeAffinity() +
+                ", aggregateTaskMembership=" + getAggregateTaskMembership() +
+                ", taskExecutionDetail=" + getTaskExecutionDetail() +
+                ", registered=" + isRegistered() +
+                '}';
     }
 }

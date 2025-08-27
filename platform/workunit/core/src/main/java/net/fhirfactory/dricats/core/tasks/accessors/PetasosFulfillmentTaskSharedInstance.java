@@ -123,11 +123,11 @@ public class PetasosFulfillmentTaskSharedInstance extends PetasosTaskSharedInsta
 
 
     public boolean isaRetry() {
-        return (getInstance().isARetry());
+        return (getInstance().isaRetry());
     }
 
     public void setaRetry(boolean aRetry) {
-        getInstance().setARetry(aRetry);
+        getInstance().setaRetry(aRetry);
     }
 
 

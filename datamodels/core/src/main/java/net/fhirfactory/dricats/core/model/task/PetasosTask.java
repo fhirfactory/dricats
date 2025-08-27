@@ -24,8 +24,6 @@ package net.fhirfactory.dricats.core.model.task;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
-import lombok.extern.jackson.Jacksonized;
-import lombok.extern.slf4j.Slf4j;
 import net.fhirfactory.dricats.core.constants.petasos.PetasosPropertyConstants;
 import net.fhirfactory.dricats.core.model.componentid.ComponentIdType;
 import net.fhirfactory.dricats.core.model.datagrid.datatypes.DatagridElementSourceResourceIdType;
@@ -38,7 +36,10 @@ import net.fhirfactory.dricats.core.model.task.datatypes.status.datatypes.TaskOu
 import net.fhirfactory.dricats.core.model.task.datatypes.tasktype.TaskTypeType;
 import net.fhirfactory.dricats.core.model.task.datatypes.traceability.datatypes.TaskTraceabilityType;
 import net.fhirfactory.dricats.core.model.task.datatypes.work.datatypes.TaskWorkItemType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -50,14 +51,17 @@ import java.util.Set;
  * This class represents a Petasos Task.
  */
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode
-@Slf4j
-@Jacksonized
 public class PetasosTask implements Serializable {
+    //
+    // Housekeeping
+    //
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private static final Logger LOG = LoggerFactory.getLogger(PetasosTask.class);
+
+    //
+    // Member Variables
+    //
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSSXXX", timezone = PetasosPropertyConstants.DEFAULT_TIMEZONE)
     private Instant creationInstant;
@@ -174,6 +178,134 @@ public class PetasosTask implements Serializable {
         boolean hasValue = taskExecutionDetail != null;
         return(hasValue);
     }
+    
+    //
+    // Getters and Setters
+    //
+    
+    protected Logger getLogger(){
+        return(LOG);
+    }
+
+    public Instant getCreationInstant() {
+        return creationInstant;
+    }
+
+    public void setCreationInstant(Instant creationInstant) {
+        this.creationInstant = creationInstant;
+    }
+
+    public Instant getUpdateInstant() {
+        return updateInstant;
+    }
+
+    public void setUpdateInstant(Instant updateInstant) {
+        this.updateInstant = updateInstant;
+    }
+
+    public DatagridElementSourceResourceIdType getSourceResourceId() {
+        return sourceResourceId;
+    }
+
+    public void setSourceResourceId(DatagridElementSourceResourceIdType sourceResourceId) {
+        this.sourceResourceId = sourceResourceId;
+    }
+
+    public TaskContextType getTaskContext() {
+        return taskContext;
+    }
+
+    public void setTaskContext(TaskContextType taskContext) {
+        this.taskContext = taskContext;
+    }
+
+    public TaskIdType getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(TaskIdType taskId) {
+        this.taskId = taskId;
+    }
+
+    public TaskTypeType getTaskType() {
+        return taskType;
+    }
+
+    public void setTaskType(TaskTypeType taskType) {
+        this.taskType = taskType;
+    }
+
+    public TaskWorkItemType getTaskWorkItem() {
+        return taskWorkItem;
+    }
+
+    public void setTaskWorkItem(TaskWorkItemType taskWorkItem) {
+        this.taskWorkItem = taskWorkItem;
+    }
+
+    public TaskTraceabilityType getTaskTraceability() {
+        return taskTraceability;
+    }
+
+    public void setTaskTraceability(TaskTraceabilityType taskTraceability) {
+        this.taskTraceability = taskTraceability;
+    }
+
+    public TaskOutcomeStatusType getTaskOutcomeStatus() {
+        return taskOutcomeStatus;
+    }
+
+    public void setTaskOutcomeStatus(TaskOutcomeStatusType taskOutcomeStatus) {
+        this.taskOutcomeStatus = taskOutcomeStatus;
+    }
+
+    public List<TaskPerformerTypeType> getTaskPerformerTypes() {
+        return taskPerformerTypes;
+    }
+
+    public void setTaskPerformerTypes(List<TaskPerformerTypeType> taskPerformerTypes) {
+        this.taskPerformerTypes = taskPerformerTypes;
+    }
+
+    public TaskReasonType getTaskReason() {
+        return taskReason;
+    }
+
+    public void setTaskReason(TaskReasonType taskReason) {
+        this.taskReason = taskReason;
+    }
+
+    public ComponentIdType getTaskNodeAffinity() {
+        return taskNodeAffinity;
+    }
+
+    public void setTaskNodeAffinity(ComponentIdType taskNodeAffinity) {
+        this.taskNodeAffinity = taskNodeAffinity;
+    }
+
+    public Set<TaskIdType> getAggregateTaskMembership() {
+        return aggregateTaskMembership;
+    }
+
+    public void setAggregateTaskMembership(Set<TaskIdType> aggregateTaskMembership) {
+        this.aggregateTaskMembership = aggregateTaskMembership;
+    }
+
+    public TaskExecutionStatus getTaskExecutionDetail() {
+        return taskExecutionDetail;
+    }
+
+    public void setTaskExecutionDetail(TaskExecutionStatus taskExecutionDetail) {
+        this.taskExecutionDetail = taskExecutionDetail;
+    }
+
+    public boolean isRegistered() {
+        return registered;
+    }
+
+    public void setRegistered(boolean registered) {
+        this.registered = registered;
+    }
 
     //
     // Update
@@ -191,7 +323,7 @@ public class PetasosTask implements Serializable {
      * @return The updated PetasosTask.
      */
     protected PetasosTask updatePetasosTask(PetasosTask update) {
-        log.debug(".updatePetasosTask(): Entry, petasosTask->{}", update);
+        getLogger().debug(".updatePetasosTask(): Entry, petasosTask->{}", update);
         if (update == null) {
             return (this);
         }
@@ -201,74 +333,74 @@ public class PetasosTask implements Serializable {
         }
         // taskContext
         if (update.getTaskContext() != null) {
-            log.trace(".updatePetasosTask(): Updating TaskContext");
+            getLogger().trace(".updatePetasosTask(): Updating TaskContext");
             if (!(this.getTaskContext() != null)) {
-                log.trace(".updatePetasosTask(): Updating TaskContext: Copying Whole TaskContext");
+                getLogger().trace(".updatePetasosTask(): Updating TaskContext: Copying Whole TaskContext");
                 this.setTaskContext(update.getTaskContext());
             } else {
-                log.trace(".updatePetasosTask(): Updating TaskContext: Performing TaskContext per-attribute update ");
+                getLogger().trace(".updatePetasosTask(): Updating TaskContext: Performing TaskContext per-attribute update ");
                 if (update.getTaskContext().hasTaskEncounter()) {
-                    log.trace(".updatePetasosTask(): Updating TaskContext: updating TaskEncounter attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskContext: updating TaskEncounter attribute");
                     this.getTaskContext().setTaskEncounter(update.getTaskContext().getTaskEncounter());
                 }
                 if (update.getTaskContext().hasTaskBeneficiary()) {
-                    log.trace(".updatePetasosTask(): Updating TaskContext: updating TaskBeneficiary attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskContext: updating TaskBeneficiary attribute");
                     this.getTaskContext().setTaskBeneficiary(update.getTaskContext().getTaskBeneficiary());
                 }
                 if (update.getTaskContext().hasTaskTriggerSummary()) {
-                    log.trace(".updatePetasosTask(): Updating TaskContext: updating TaskTriggerSummary attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskContext: updating TaskTriggerSummary attribute");
                     this.getTaskContext().setTaskTriggerSummary(update.getTaskContext().getTaskTriggerSummary());
                 }
             }
         }
         // taskType
         if (update.getTaskType() != null) {
-            log.trace(".updatePetasosTask(): Updating TaskType");
+            getLogger().trace(".updatePetasosTask(): Updating TaskType");
             if (!(this.getTaskType() != null)) {
-                log.trace(".updatePetasosTask(): Updating TaskType: Copying Whole TaskType");
+                getLogger().trace(".updatePetasosTask(): Updating TaskType: Copying Whole TaskType");
                 this.setTaskType(update.getTaskType());
             } else {
-                log.trace(".updatePetasosTask(): Updating TaskType: Performing TaskType per-attribute update ");
+                getLogger().trace(".updatePetasosTask(): Updating TaskType: Performing TaskType per-attribute update ");
                 if (update.getTaskType().hasTaskSubType()) {
-                    log.trace(".updatePetasosTask(): Updating TaskType: updating TaskSubType attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskType: updating TaskSubType attribute");
                     this.getTaskType().setTaskSubType(update.getTaskType().getTaskSubType());
                 }
                 if (update.getTaskType().hasTaskType()) {
-                    log.trace(".updatePetasosTask(): Updating TaskType: updating TaskType attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskType: updating TaskType attribute");
                     this.getTaskType().setTaskType(update.getTaskType().getTaskType());
                 }
             }
         }
         // taskWorkItem
         if (update.getTaskWorkItem() != null) {
-            log.trace(".updatePetasosTask(): Updating TaskWorkItem");
+            getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem");
             if (!(this.getTaskWorkItem() != null)) {
-                log.trace(".updatePetasosTask(): Updating TaskWorkItem: Copying Whole TaskWorkItem");
+                getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Copying Whole TaskWorkItem");
                 this.setTaskWorkItem(update.getTaskWorkItem());
             } else {
-                log.trace(".updatePetasosTask(): Updating TaskWorkItem: Performing TaskWorkItem per-attribute update");
+                getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Performing TaskWorkItem per-attribute update");
                 if (update.getTaskWorkItem().hasIngresContent()) {
-                    log.trace(".updatePetasosTask(): Updating TaskWorkItem: Updating IngresContent attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Updating IngresContent attribute");
                     this.getTaskWorkItem().setIngresContent(update.getTaskWorkItem().getIngresContent());
                 }
                 if (update.getTaskWorkItem().hasEgressContent()) {
-                    log.trace(".updatePetasosTask(): Updating TaskWorkItem: Updating EgressContent attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Updating EgressContent attribute");
                     this.getTaskWorkItem().setEgressContent(update.getTaskWorkItem().getEgressContent());
                 }
                 if (update.getTaskWorkItem().hasFailureDescription()) {
-                    log.trace(".updatePetasosTask(): Updating TaskWorkItem: Updating FailureDescription attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Updating FailureDescription attribute");
                     this.getTaskWorkItem().setFailureDescription(update.getTaskWorkItem().getFailureDescription());
                 }
                 if (update.getTaskWorkItem().hasInstanceID()) {
-                    log.trace(".updatePetasosTask(): Updating TaskWorkItem: Updating InstanceId attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Updating InstanceId attribute");
                     this.getTaskWorkItem().setInstanceID(update.getTaskWorkItem().getInstanceID());
                 }
                 if (update.getTaskWorkItem().hasPayloadTopicID()) {
-                    log.trace(".updatePetasosTask(): Updating TaskWorkItem: Updating TypeId attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Updating TypeId attribute");
                     this.getTaskWorkItem().setUoWTypeID(update.getTaskWorkItem().getTypeID());
                 }
                 if (update.getTaskWorkItem().hasProcessingOutcome()) {
-                    log.trace(".updatePetasosTask(): Updating TaskWorkItem: Updating ProcessingOutcome attribute");
+                    getLogger().trace(".updatePetasosTask(): Updating TaskWorkItem: Updating ProcessingOutcome attribute");
                     this.getTaskWorkItem().setProcessingOutcome(update.getTaskWorkItem().getProcessingOutcome());
                 }
             }
@@ -353,4 +485,9 @@ public class PetasosTask implements Serializable {
         // now, definitely done!
         return (this);
     }
+    
+    
+    //
+    // Utility Methods
+    //
 }
